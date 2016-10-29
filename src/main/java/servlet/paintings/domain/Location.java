@@ -7,22 +7,24 @@ public class Location {
 	private String plase = "unknown";
 	
 	
-	private Location(String country, String city, String plase) {
+	private Location(String plase, String country, String city) {
 		this.country = country;
 		this.city = city;
 		this.plase = plase;
 	}
 
 
+	
 	public String getCountry() {
 		return country;
 	}
-
 
 	public void setCountry(String country) {
 		this.country = country;
 	}
 
+	
+	
 
 	public String getCity() {
 		return city;
@@ -34,6 +36,8 @@ public class Location {
 	}
 
 
+	
+	
 	public String getPlase() {
 		return plase;
 	}
@@ -42,7 +46,5 @@ public class Location {
 	public void setPlase(String plase) {
 		this.plase = plase;
 	}
-	
-	
 	
 }
