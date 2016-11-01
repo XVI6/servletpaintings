@@ -7,7 +7,7 @@ public class Location {
 	private String plase = "unknown";
 	
 	
-	private Location(String plase, String country, String city) {
+	public Location(String country, String city, String plase) {
 		this.country = country;
 		this.city = city;
 		this.plase = plase;

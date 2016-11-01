@@ -4,10 +4,10 @@ public class Painting {
 	
 	private String name = "unknown";
 	private int yoc = 0;
-	protected Artist artist;
-	protected Location location;
+	protected String artist;
+	protected String location;
 	
-	public Painting(String name, int yoc, Artist artist, Location location) {
+	public Painting(String name, int yoc, String artist, String location) {
 		this.name = name;
 		this.yoc = yoc;
 		this.artist = artist;
@@ -38,23 +38,23 @@ public class Painting {
 	
 	
 
-	public Artist getArtist() {
+	public String getArtist() {
 		return artist;
 	}
 
-	public void setArtist(Artist artist) {
+	public void String(String artist) {
 		this.artist = artist;
 	}
 	
 	
 	
 	
-	public Location getLocation() {
+	public String getLocation() {
 		return location;
 	}
 	
-	public void setLocation(Location location) {
-		this.location = location;
+	public void setLocation(String plase) {
+		this.location = plase;
 	}
 	
 	

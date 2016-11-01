@@ -1,6 +1,5 @@
 package servlet.paintings.service;
 
-//import java.util.ArrayList;
 //import java.util.List;
 import java.util.LinkedList;
 
@@ -13,26 +12,58 @@ public class StorageService {
 	private LinkedList <Painting> paintings = new LinkedList <Painting>();
 	
 	
-	
-	
 	//C
 	
+	//Dodaje do tabeli artist i sprawdza czy byl juz podany ten rekord
 	public void addArtist(Artist artist) {
-		artists.add(artist);
+		if (!artists.contains(artist)) {
+			artists.add(new Artist(artist.getName(), artist.getYob(), artist.getYod()));
+		}
 	}
 	
+	//Dodaje do tabeli tabele location i sprawdza czy byl juz podany ten rekord
 	public void addLocation(Location location) {
-		locations.add(location);
+		if (!locations.contains(location)) {
+			locations.add(new Location(location.getCountry(), location.getCity(), location.getPlase()));
+		}
 	}
 	
+	//Dodaje do tabeli painting i sprawdza czy byl juz podany ten rekord
 	public void addPainting(Painting painting) {
-		paintings.add(painting);
+		if (!paintings.contains(painting)) {
+			paintings.add(new Painting(painting.getName(), painting.getYoc(), painting.getArtist(), painting.getLocation()));
+		}
+		
+		//czy bylo juz podane miejsce location (powiazanie z locations)
+		boolean b = false;
+		for (Location item : locations) {
+			if (item.getPlase().equals(painting.getLocation())) {
+				b = true;
+				break;
+			}
+		}
+		if (!b) {
+			locations.add(new Location(null, null, painting.getLocation()));
+		}
+		
+		//czy byla juz nazwa artist (powiazanie z artists)
+		b=false;
+		for (Artist item : artists) {
+			if (item.getName().equals(painting.getArtist())) {
+				b = true;
+				break;
+			}
+		}
+		if (!b) {
+			artists.add(new Artist(painting.getArtist(), 0, 0));
+		}
 	}
 	
 	
 	
 	
 	//R
+	// zwraca tabele
 	
 	public LinkedList<Artist> getArtists() {
 		return artists;
@@ -67,6 +98,7 @@ public class StorageService {
 	
 	
 	//D
+	//Usuwa z tabel
 	
 	public void deleteArtist(Artist artist) {
 		artists.remove(artist);

@@ -5,14 +5,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Demo application</title>
+        <title>Paintings</title>
     </head>
     <body>
-
-		<h2>Hello World!</h2>
-		
-        <p><a href="hello">Greetings</a></p>
-
-
+    	<p><h2>Paintings progect</h2></p>
+    	
+        <p><a href="add.jsp">Create</a></p>
+        <p><a href="">Read</a></p>
+        <p><a href="">Update</a></p>
+        <p><a href="">Delete</a></p>
+        
     </body>
 </html>
