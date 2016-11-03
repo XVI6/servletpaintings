@@ -26,13 +26,20 @@ public class AddPainting extends HttpServlet{
 		
 		PrintWriter print = response.getWriter();
 		
+		StorageService sts = (StorageService)request.getAttribute("storage");
 		//???
-		StorageService sts = new StorageService();
 		String name = request.getParameter("name");
 		int yoc = Integer.parseInt(request.getParameter("yoc"));
 		String artist = request.getParameter("artist");
 		String location = request.getParameter("location");
-		sts.addPainting(new Painting(name, yoc, artist, location));
+		
+		Painting p = new Painting(name, yoc, artist, location);
+		
+		request.setAttribute("storage", p);
+		sts.addPainting(p);
+		
+		
+		//sts.addPainting(new Painting(name, yoc, artist, location));
 		
 		print.println("<html><head><title>Add Painting</title></head> <body>"
 				+ "<p>Following painting has been added to storage: </p>"
@@ -40,7 +47,7 @@ public class AddPainting extends HttpServlet{
 				+ "<p>Year of creation: " + yoc + "</p>"
 				+ "<p>Artist: " + artist + "</p>"
 				+ "<p>Location: " + location + "</p>"
-				+ "<p><a href='showAll'>Show All</p>"
+				+ "<p><a href='showAll.jsp'>Show All</p>"
 				+ "</body></html>");
 		print.close();
 		

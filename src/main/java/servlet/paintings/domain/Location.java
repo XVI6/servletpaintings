@@ -6,8 +6,13 @@ public class Location {
 	private String city = "unknown";
 	private String plase = "unknown";
 	
+	public Location() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
 	
 	public Location(String country, String city, String plase) {
+		super();
 		this.country = country;
 		this.city = city;
 		this.plase = plase;

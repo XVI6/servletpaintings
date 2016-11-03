@@ -14,6 +14,7 @@ import servlet.paintings.domain.Location;
 import servlet.paintings.domain.Painting;
 import servlet.paintings.service.StorageService;
 
+
 @WebServlet(urlPatterns = "delPainting")
 public class DelPainting extends HttpServlet{
 	private static final long serialVersionUID = 1L;
@@ -26,14 +27,17 @@ public class DelPainting extends HttpServlet{
 		
 		PrintWriter print = response.getWriter();
 		
+		StorageService sts = (StorageService)request.getAttribute("storage");
+		
+		
 		//???
-		StorageService sts = new StorageService();
+		
 		String name = request.getParameter("name");
 		int yoc = Integer.parseInt(request.getParameter("yoc"));
 		String artist = request.getParameter("artist");
 		String location = request.getParameter("location");
-		sts.deletePainting(new Painting(name, yoc, artist, location));
 		
+		sts.deletePainting(new Painting(name, yoc, artist, location));
 		
 		print.println("<html><head><title>Add Painting</title></head> <body>"
 				+ "<p>Following painting has been deleted from storage: </p>"

@@ -1,15 +1,16 @@
 package servlet.paintings.service;
 
-//import java.util.List;
 import java.util.LinkedList;
 
 import servlet.paintings.domain.*;
 
 public class StorageService {
 	
+	Artist a = new Artist("aaaaa", 12, 13);
 	private LinkedList <Artist> artists = new LinkedList <Artist>();
 	private LinkedList <Location> locations = new LinkedList <Location>();
 	private LinkedList <Painting> paintings = new LinkedList <Painting>();
+	
 	
 	
 	//C
@@ -27,6 +28,7 @@ public class StorageService {
 			locations.add(new Location(location.getCountry(), location.getCity(), location.getPlase()));
 		}
 	}
+	
 	
 	//Dodaje do tabeli painting i sprawdza czy byl juz podany ten rekord
 	public void addPainting(Painting painting) {
@@ -80,18 +82,24 @@ public class StorageService {
 	
 	
 	
-	//U???????????
+	//U
+	//Update tabel
 	
-	public void updateArtist(int i, Artist artist) {
-		artists.set(i, artist);
+	public void updateArtist(Artist old_artist, Artist new_artist) {
+		//System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@\n"+artists.indexOf(new Artist(old_artist.getName(), old_artist.getYob(), old_artist.getYod())));
+		//artists.add(new Artist(artist.getName(), artist.getYob(), artist.getYod()));
+		artists.set((int)artists.indexOf(old_artist), new_artist);
+		
 	}
 	
-	public void updateLocation(int i, Location location) {
-		locations.set(i, location);
+	public void updateLocation(Location old_location, Location new_location) {
+		locations.set(locations.indexOf(old_location), new_location);
+		
 	}
 	
-	public void updatePainting(int i, Painting painting) {
-		paintings.set(i, painting);
+	public void updatePainting(Painting old_painting, Painting new_painting) {
+		paintings.set(paintings.indexOf(old_painting), new_painting);
+		
 	}
 	
 	
@@ -111,14 +119,5 @@ public class StorageService {
 	public void deletePainting(Painting painting) {
 		paintings.remove(painting);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

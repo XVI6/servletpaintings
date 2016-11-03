@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,21 +14,22 @@
 		<form action="addArtist.jsp">
 			
 			<h2>Add Artist</h2>
-			Name : <input type="text" name="name" value="${artist.name}"/><br>
-			Year of birth :<input type="text"  name="yob" value="${artist.yob}" /><br />
-			Year of death :<input type="text"  name="yod" value="${artist.yod}" /><br />
+			Name : <input type="text" name="name" value="${artist.name}" >
+			Year of birth :<input type="text"  name="yob" value="${artist.yob}" >
+			Year of death :<input type="text"  name="yod" value="${artist.yod}" >
   			<input type="submit" value=" OK ">
-			
+			 
 		</form>
 		
 		
 		
-		<form action="delArtist.jsp">
+		<form action="getChangedArtist.jsp">
 			
 			<h2>Update Artist</h2>
-			Name : <input type="text" name="name" value="${artist.name}"/><br>
-			Year of birth :<input type="text"  name="yob" value="${artist.yob}" /><br />
-			Year of death :<input type="text"  name="yod" value="${artist.yod}" /><br />
+			<h5>Change:</h5>
+			Name : <input type="text" name="name" value="${artist.name}" >
+			Year of birth :<input type="text"  name="yob" value="${artist.yob}" >
+			Year of death :<input type="text"  name="yod" value="${artist.yod}" >
   			<input type="submit" value=" OK ">
 			
 		</form>
@@ -39,9 +39,9 @@
 		<form action="delArtist.jsp">
 			
 			<h2>Delete Artist</h2>
-			Name : <input type="text" name="name" value="${artist.name}"/><br>
-			Year of birth :<input type="text"  name="yob" value="${artist.yob}" /><br />
-			Year of death :<input type="text"  name="yod" value="${artist.yod}" /><br />
+			Name : <input type="text" name="name" value="${artist.name}" >
+			Year of birth :<input type="text"  name="yob" value="${artist.yob}" >
+			Year of death :<input type="text"  name="yod" value="${artist.yod}" >
   			<input type="submit" value=" OK ">
 			
 		</form>

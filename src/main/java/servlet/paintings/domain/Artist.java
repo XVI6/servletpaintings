@@ -8,8 +8,13 @@ public class Artist {
 	private int yod = 0;
 	
 	
+	public Artist() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
 	
 	public Artist(String name, int yob, int yod) {
+		super();
 		this.name = name;
 		this.yob = yob;
 		this.yod = yod;
