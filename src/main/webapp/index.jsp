@@ -10,10 +10,11 @@
     <body>
     	<p><h2>Paintings progect</h2></p>
     	
-        <p><a href="add.jsp">Create</a></p>
-        <p><a href="">Read</a></p>
-        <p><a href="">Update</a></p>
-        <p><a href="">Delete</a></p>
+        <p><a href="getAtrist.jsp">Artist</a></p>
+        <p><a href="getLocation">Location</a></p>
+        <p><a href="getPainting">Painting</a></p>
+        <p><a href="showAll.jsp">Show all</a></p>
+        
         
     </body>
 </html>

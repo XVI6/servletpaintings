@@ -23,13 +23,25 @@ public class GetPainting extends HttpServlet{
 		PrintWriter print = response.getWriter();
 		
 		print.println("<html> <head><title>Get Painting</title></head> <body>"
-				+ "<form action = 'addPainting'>"
+					+ "<form action = 'addPainting'>"
 				+ "Painting name: <input type = 'text' name='name'/></br>"
 				+ "Year of creation: <input type = 'text' name='yoc'/></br>"
 				+ "Artist: <input type = 'text' name='artist'/></br>"
 				+ "Location: <input type = 'text' name='location'/></br>"
-				+ "<input type='submit' value=' OK ' />"
-				+ "</form></body></html>");
+				+ "<input type='submit' value=' OK ' /></form>"
+					+ "<form action = 'updPainting'>"
+				+ "Painting name: <input type = 'text' name='name'/></br>"
+				+ "Year of creation: <input type = 'text' name='yoc'/></br>"
+				+ "Artist: <input type = 'text' name='artist'/></br>"
+				+ "Location: <input type = 'text' name='location'/></br>"
+				+ "<input type='submit' value=' OK ' /></form>"
+					+ "<form action = 'delPainting'>"
+				+ "Painting name: <input type = 'text' name='name'/></br>"
+				+ "Year of creation: <input type = 'text' name='yoc'/></br>"
+				+ "Artist: <input type = 'text' name='artist'/></br>"
+				+ "Location: <input type = 'text' name='location'/></br>"
+				+ "<input type='submit' value=' OK ' /></form>"
+				+ "</body></html>");
 		print.close();
 		
 		

@@ -14,7 +14,7 @@
 	<% storage.addLocation(location); %>
 	
 	<p>Following person has been added to storage: </p>
-		<p>Country: <jsp:getProperty name="location" property="country"/> </p>
+		<p>Country: <jsp:getProperty name="location" property="country"/></p>
 		<p>City: <jsp:getProperty name="location" property="city"></jsp:getProperty></p>
 		<p>Plase: <jsp:getProperty name="location" property="plase"></jsp:getProperty></p>
 		<p>

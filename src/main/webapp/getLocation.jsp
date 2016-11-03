@@ -12,11 +12,37 @@
 		<jsp:useBean id="location" class="servlet.paintings.domain.Location" scope="session"></jsp:useBean>
 		
 		<form action="addLocation.jsp">
+			
+			<h2>Add Artist</h2>
 			Country :<input type="text" name="country" value="${location.country}">
 			City :<input type="text" name="city" value="${location.city}">
 			Plase :<input type="text" name="plase" value="${location.plase}">
 			<input type="submit" value=" OK ">
 			
+		</form>
+		
+		
+		
+		<form action="updLocation.jsp">
+			
+			<h2>Update Artist</h2>
+			Country :<input type="text" name="country" value="${location.country}">
+			City :<input type="text" name="city" value="${location.city}">
+			Plase :<input type="text" name="plase" value="${location.plase}">
+			<input type="submit" value=" OK ">
+			
+		
+		</form>
+		
+		
+		
+		<form action="delLocation.jsp">
+			
+			<h2>Remove Artist</h2>
+			Country :<input type="text" name="country" value="${location.country}">
+			City :<input type="text" name="city" value="${location.city}">
+			Plase :<input type="text" name="plase" value="${location.plase}">
+			<input type="submit" value=" OK ">
 		
 		</form>
 			

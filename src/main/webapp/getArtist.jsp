@@ -14,12 +14,39 @@
 		
 		<form action="addArtist.jsp">
 			
+			<h2>Add Artist</h2>
 			Name : <input type="text" name="name" value="${artist.name}"/><br>
 			Year of birth :<input type="text"  name="yob" value="${artist.yob}" /><br />
 			Year of death :<input type="text"  name="yod" value="${artist.yod}" /><br />
   			<input type="submit" value=" OK ">
 			
 		</form>
+		
+		
+		
+		<form action="delArtist.jsp">
+			
+			<h2>Update Artist</h2>
+			Name : <input type="text" name="name" value="${artist.name}"/><br>
+			Year of birth :<input type="text"  name="yob" value="${artist.yob}" /><br />
+			Year of death :<input type="text"  name="yod" value="${artist.yod}" /><br />
+  			<input type="submit" value=" OK ">
+			
+		</form>
+		
+		
+		
+		<form action="delArtist.jsp">
+			
+			<h2>Delete Artist</h2>
+			Name : <input type="text" name="name" value="${artist.name}"/><br>
+			Year of birth :<input type="text"  name="yob" value="${artist.yob}" /><br />
+			Year of death :<input type="text"  name="yod" value="${artist.yod}" /><br />
+  			<input type="submit" value=" OK ">
+			
+		</form>
+		
+		
 		
 		
 	</body>
