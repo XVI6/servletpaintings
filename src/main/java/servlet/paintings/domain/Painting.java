@@ -4,10 +4,16 @@ public class Painting {
 	
 	private String name = "unknown";
 	private int yoc = 0;
-	protected String artist;
-	protected String location;
+	protected String artist = "unknown";
+	protected String location = "unknown";
+	
+	public Painting() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
 	
 	public Painting(String name, int yoc, String artist, String location) {
+		super();
 		this.name = name;
 		this.yoc = yoc;
 		this.artist = artist;

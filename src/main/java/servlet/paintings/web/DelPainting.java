@@ -15,7 +15,7 @@ import servlet.paintings.domain.Painting;
 import servlet.paintings.service.StorageService;
 
 
-@WebServlet(urlPatterns = "delPainting")
+@WebServlet(urlPatterns = "/DelPainting")
 public class DelPainting extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	
