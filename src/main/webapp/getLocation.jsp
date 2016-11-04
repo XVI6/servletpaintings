@@ -10,7 +10,6 @@
 		
 		<jsp:useBean id="storage" class="servlet.paintings.service.StorageService" scope="application"></jsp:useBean>
 		<jsp:useBean id="location" class="servlet.paintings.domain.Location" scope="session"></jsp:useBean>
-		<jsp:useBean id="location2" class="servlet.paintings.domain.Location" scope="session"></jsp:useBean>
 		
 		<form action="addLocation.jsp">
 			
@@ -24,17 +23,13 @@
 		
 		
 		
-		<form action="updLocation.jsp">
+		<form action="getChangedLocation.jsp">
 			
 			<h2>Update Location</h2>
-			<h1>Change</h1>
+			<h5>Change</h5>
 			Country :<input type="text" name="country" value="${location.country}">
 			City :<input type="text" name="city" value="${location.city}">
 			Plase :<input type="text" name="plase" value="${location.plase}">
-			<h1>To</h1>
-			Country :<input type="text" name="country" value="${location2.country}">
-			City :<input type="text" name="city" value="${location2.city}">
-			Plase :<input type="text" name="plase" value="${location2.plase}">
 			<input type="submit" value=" OK ">
 			
 		</form>

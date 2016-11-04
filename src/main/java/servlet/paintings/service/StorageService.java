@@ -86,8 +86,6 @@ public class StorageService {
 	//Update tabel
 	
 	public void updateArtist(Artist old_artist, Artist new_artist) {
-		//System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@\n"+artists.indexOf(new Artist(old_artist.getName(), old_artist.getYob(), old_artist.getYod())));
-		//artists.add(new Artist(artist.getName(), artist.getYob(), artist.getYod()));
 		artists.set((int)artists.indexOf(old_artist), new_artist);
 		
 	}
