@@ -14,7 +14,7 @@ import servlet.paintings.domain.Location;
 import servlet.paintings.domain.Painting;
 import servlet.paintings.service.StorageService;
 
-@WebServlet(urlPatterns = "/addPainting")
+@WebServlet(urlPatterns = "/AddPainting")
 public class AddPainting extends HttpServlet{
 	
 	private static final long serialVersionUID = 1L;

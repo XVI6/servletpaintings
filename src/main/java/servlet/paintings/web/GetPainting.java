@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/getPainting")
+@WebServlet(urlPatterns = "/GetPainting")
 public class GetPainting extends HttpServlet{
 	
 	private static final long serialVersionUID = 1L;
@@ -23,7 +23,7 @@ public class GetPainting extends HttpServlet{
 		PrintWriter print = response.getWriter();
 		
 		print.println("<html> <head><title>Get Painting</title></head> <body>"
-					+ "<h2>Add Painting</h2>"
+					+ "<h2>Get Painting</h2>"
 				+ "<form action = 'addPainting'>"
 				+ "Painting name: <input type = 'text' name='name' >"
 				+ "Year of creation: <input type = 'text' name='yoc' >"
