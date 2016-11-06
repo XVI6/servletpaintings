@@ -2,9 +2,9 @@ package servlet.paintings.domain;
 
 public class Location {
 	
-	private String country = "unknown";
-	private String city = "unknown";
-	private String plase = "unknown";
+	private String country;
+	private String city;
+	private String plase;
 	
 	public Location() {
 		// TODO Auto-generated constructor stub

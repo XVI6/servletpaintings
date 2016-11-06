@@ -3,9 +3,9 @@ package servlet.paintings.domain;
 public class Artist {
 	
 	
-	private String name = "unknown";
-	private int yob = 0;
-	private int yod = 0;
+	private String name;
+	private int yob;
+	private int yod;
 	
 	
 	public Artist() {

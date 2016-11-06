@@ -1,12 +1,13 @@
 package servlet.paintings.service;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 import servlet.paintings.domain.*;
 
 public class StorageService {
 	
-	Artist a = new Artist("aaaaa", 12, 13);
 	private LinkedList <Artist> artists = new LinkedList <Artist>();
 	private LinkedList <Location> locations = new LinkedList <Location>();
 	private LinkedList <Painting> paintings = new LinkedList <Painting>();
@@ -118,4 +119,49 @@ public class StorageService {
 		paintings.remove(painting);
 	}
 	
+	
+	
+	//find
+	//znaiduje rekord o podanych danych
+	public ArrayList<Artist> findArtists(Artist artist) {
+		
+		Iterator<Artist> iterArtist = artists.iterator();
+		ArrayList<Artist> a = new ArrayList<Artist>();
+		
+		while (iterArtist.hasNext()) {
+			if (iterArtist.equals(artist)) {
+				a.add(iterArtist.next());	
+			}			
+		}
+		
+		return a;
+	}
+	
+	
+	public ArrayList<Location> findLocations(Location location) {
+		Iterator<Location> iterLocation = locations.iterator();
+		ArrayList<Location> l = new ArrayList<Location>();
+		
+		while (iterLocation.hasNext()) {
+			if (iterLocation.equals(location)) {
+				l.add(iterLocation.next());	
+			}			
+		}
+		
+		return l;
+	}
+	
+	public ArrayList<Painting> findPaintings(Painting painting) {		
+		Iterator<Painting> iterPaintings = paintings.iterator();
+		ArrayList<Painting> p = new ArrayList<Painting>();
+		
+		
+		while (iterPaintings.hasNext()) {
+			if (iterPaintings.equals(painting)) {
+				p.add(iterPaintings.next());	
+			}			
+		}
+		
+		return p;
+	}	
 }

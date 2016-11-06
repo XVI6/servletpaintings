@@ -2,10 +2,10 @@ package servlet.paintings.domain;
 
 public class Painting {
 	
-	private String name = "unknown";
-	private int yoc = 0;
-	protected String artist = "unknown";
-	protected String location = "unknown";
+	private String name;
+	private int yoc;
+	protected String artist;
+	protected String location;
 	
 	public Painting() {
 		// TODO Auto-generated constructor stub
