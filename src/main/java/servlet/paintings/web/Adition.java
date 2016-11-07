@@ -22,12 +22,12 @@ public class Adition extends HttpServlet{
 		print.println("<html><body><h2>Choose 'The Starry Night' autor </h2>" +
 				"<form action='aditionanswer'>" +
 				"First name: <input type='text' name='firstName' /> <br />" +
-				"<input type='checkbox' name='artist' value='artist1'>Pablo Ruiz y Picasso( Pablo Picasso )<br />" +
-				"<input type='checkbox' name='artist' value='artist2'>Michelangelo di Lodovico Buonarroti Simoni<br />" +
-				"<input type='checkbox' name='artist' value='artist3'>Vincent Willem van Gogh<br />" +
-				"<input type='checkbox' name='artist' value='artist4'>Rembrandt Harmenszoon van Rijn<br />" +
+				"<div><input type='radio' name='artist' value='artist1'>Pablo Ruiz y Picasso( Pablo Picasso )<br />" +
+				"<input type='radio' name='artist' value='artist2'>Michelangelo di Lodovico Buonarroti Simoni<br />" +
+				"<input type='radio' name='artist' value='artist3'>Vincent Willem van Gogh<br />" +
+				"<input type='radio' name='artist' value='artist4'>Rembrandt Harmenszoon van Rijn<br />" +
 				"<input type='submit' value=' OK ' />" +
-				"</form>" +
+				"</div></form>" +
 				"</body></html>");
 		print.close();
 		

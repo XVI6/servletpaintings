@@ -13,23 +13,19 @@ import javax.servlet.http.HttpServletResponse;
 
 public class AditionAnswer extends HttpServlet{
 	
-	
-
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
 		response.setContentType("text/html");
-		String answer = "Vincent Willem van Gogh";
+		String answer = "artist3";
 		boolean b = false;
 		
 		PrintWriter print = response.getWriter();
 		
 		
-		
-		String selectedArtist = "";
 		for (String art : request.getParameterValues("artist")) {
-			if (art.equals(answer)) {
+			if (art.equalsIgnoreCase(answer)) {
 				b = true;
 			}
 		}
@@ -39,8 +35,7 @@ public class AditionAnswer extends HttpServlet{
 		
 				if (b) {
 
-					print.print("<p>Your ansver is correct: "+ answer +"<br />" +
-					"</body></html>");
+					print.print("<p>Your ansver is correct: Vincent Willem van Gogh <br />");
 				}
 				else {
 					print.print("<p>Your ansver is not correct: <br />"

@@ -14,7 +14,7 @@
 		
 		<jsp:useBean id="storage" class="servlet.paintings.service.StorageService" scope="application" />
 		
-		<p><h2>Artists</h2></p>
+		<h2>Artists</h2>
 		<p>
 			<%
 			  for (Artist artist : storage.getArtists()) {
@@ -24,7 +24,7 @@
 		</p>
 		
 		
-		<p><h2>Paintings</h2></p>
+		<h2>Paintings</h2>
 		<p>
 			<%
 			  for (Painting painting : storage.getPaintings()) {
@@ -33,7 +33,7 @@
 			%>
 		</p>
 		
-		<p><h2>Locations</h2></p>
+		<h2>Locations</h2>
 		<p>
 			<%
 			  for (Location location : storage.getLocations()) {

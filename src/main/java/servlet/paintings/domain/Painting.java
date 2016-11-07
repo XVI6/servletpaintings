@@ -7,6 +7,7 @@ public class Painting {
 	protected String artist;
 	protected String location;
 	
+
 	public Painting() {
 		// TODO Auto-generated constructor stub
 		super();
@@ -47,11 +48,10 @@ public class Painting {
 	public String getArtist() {
 		return artist;
 	}
-
-	public void String(String artist) {
+	
+	public void setArtist(String artist) {
 		this.artist = artist;
 	}
-	
 	
 	
 	
