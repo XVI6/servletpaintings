@@ -14,6 +14,7 @@
         <p><a href="getPainting.jsp">Painting</a></p>
         <p><a href="getLocation.jsp">Location</a></p>
         <p><a href="showAll.jsp">Show all</a></p>
+        <p><a href="aditionform">Adition</a></p>
         
         
     </body>
