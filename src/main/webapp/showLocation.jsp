@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="servlet.paintings.domain.Location"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -17,7 +18,8 @@
 		<p><h2>Locations</h2></p>
 		<p>
 			<%	
-			for(Location l: storage.findLocations(location)){
+			ArrayList<Location> loc = storage.findLocations(new Location(location.getCountry(),location.getCity(),location.getPlase()));
+			for(Location l: loc){
 				out.println("<p>Counrty: " + l.getCountry() + "; City: " + l.getCity() + "; Plase: " + l.getPlase() + "</p>");
 			}			
 			%>

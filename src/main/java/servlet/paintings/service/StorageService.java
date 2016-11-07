@@ -210,8 +210,9 @@ public class StorageService {
 		ArrayList<Artist> a = new ArrayList<Artist>();
 		
 		while (iterArtist.hasNext()) {
-			if (iterArtist.next().getName().equals(artist.getName())) {
-				a.add(iterArtist.next());	
+			Artist art = iterArtist.next();
+			if (art.getName().equals(artist.getName()) || art.getYob()==artist.getYob() ||  art.getYod()==artist.getYod()) {
+				a.add(art);	
 			}			
 		}
 		return a;
@@ -219,21 +220,27 @@ public class StorageService {
 	
 	
 	public ArrayList<Location> findLocations(Location location) {
+		
 		Iterator<Location> iterLocation = locations.iterator();
 		ArrayList<Location> l = new ArrayList<Location>();
+		
 		while (iterLocation.hasNext()) {
-			if (iterLocation.equals(location)) {
-				l.add(iterLocation.next());	
+			Location loc = iterLocation.next();
+			if (loc.getCountry().equals(location.getCountry()) || loc.getCity().equals(location.getCity()) || loc.getPlase().equals(location.getPlase())) {
+				l.add(loc);	
 			}			
 		}
 		return l;
 	}
 	
-	public ArrayList<Painting> findPaintings(Painting painting) {		
+	public ArrayList<Painting> findPaintings(Painting painting) {
+		
 		Iterator<Painting> iterPaintings = paintings.iterator();
 		ArrayList<Painting> p = new ArrayList<Painting>();
+		
 		while (iterPaintings.hasNext()) {
-			if (iterPaintings.equals(painting)) {
+			Painting paint = iterPaintings.next();
+			if (paint.getName().equals(painting.getName()) || paint.getArtist().equals(painting.getArtist()) || paint.getLocation().equals(painting.getLocation())) {
 				p.add(iterPaintings.next());	
 			}			
 		}

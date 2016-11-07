@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="servlet.paintings.domain.Painting"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -18,7 +19,8 @@
 		<p><h2>Paintings</h2></p>
 		<p>
 			<%	
-			for(Painting p : storage.findPaintings(painting)){
+			ArrayList <Painting> paint = storage.findPaintings(new Painting(painting.getName(),painting.getYoc(),painting.getArtist(),painting.getLocation()));
+			for(Painting p : paint){
 				out.println("<p>Picture name: " + p.getName() + "; Year of creation: " + p.getYoc() + "; Artist: " + p.getArtist() + "; Location: " + p.getLocation() + "</p>");
 			}
 			%>
