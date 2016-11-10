@@ -11,9 +11,10 @@
     	<p><h2>Paintings progect</h2></p>
     	
         <p><a href="getArtist.jsp">Artist</a></p>
-        <p><a href="getLocation.jsp">Location</a></p>
         <p><a href="getPainting.jsp">Painting</a></p>
+        <p><a href="getLocation.jsp">Location</a></p>
         <p><a href="showAll.jsp">Show all</a></p>
+        <p><a href="aditionform">Adition</a></p>
         
         
     </body>

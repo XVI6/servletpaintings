@@ -2,11 +2,12 @@ package servlet.paintings.domain;
 
 public class Painting {
 	
-	private String name = "unknown";
-	private int yoc = 0;
-	protected String artist = "unknown";
-	protected String location = "unknown";
+	private String name;
+	private int yoc;
+	protected String artist;
+	protected String location;
 	
+
 	public Painting() {
 		// TODO Auto-generated constructor stub
 		super();
@@ -47,11 +48,10 @@ public class Painting {
 	public String getArtist() {
 		return artist;
 	}
-
-	public void String(String artist) {
+	
+	public void setArtist(String artist) {
 		this.artist = artist;
 	}
-	
 	
 	
 	
