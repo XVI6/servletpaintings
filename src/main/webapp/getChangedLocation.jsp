@@ -16,9 +16,9 @@
 		
 		<h2>Update Location</h2>
 		<h5>To:</h5>
-		Name : <input type="text" name="name" value="${location.name}" >
-		Year of birth :<input type="text"  name="yob" value="${location.yob}" >
-		Year of death :<input type="text"  name="yod" value="${location.yod}" >
+		Country : <input type="text" name="country" value="${location.country}" >
+		City :<input type="text"  name="city" value="${location.city}" >
+		Plase :<input type="text"  name="plase" value="${location.plase}" >
 			<input type="submit" value=" OK ">
 	</form>
 		

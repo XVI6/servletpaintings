@@ -10,11 +10,9 @@
 		
 		<jsp:useBean id="location" class="servlet.paintings.domain.Location" scope="session"></jsp:useBean>
 		<jsp:setProperty property="*" name="location"/>
-		<jsp:useBean id="location2" class="servlet.paintings.domain.Location" scope="session"></jsp:useBean>
-		<jsp:setProperty property="*" name="location2"/>
 		<jsp:useBean id="storage" class="servlet.paintings.service.StorageService" scope="application"></jsp:useBean>
 		
-		<% storage.updateLocation(location, location2); %>
+		<% storage.addLocation(location); %>
 		
 		<p>Following location has been changed in storage: </p>
 		<p>Country: <jsp:getProperty name="location" property="country"/></p>
